@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SVG\nanosvg\nanosvg.c" />
+    <ClCompile Include="SVG\SVGParser.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Wall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SVG\nanosvg\nanosvg.h" />
+    <ClInclude Include="SVG\SVGParser.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Wall.h" />
+    <ClInclude Include="wykobi\wykobi.hpp" />
+    <ClInclude Include="wykobi\wykobi_algorithm.hpp" />
+    <ClInclude Include="wykobi\wykobi_graphics_net.hpp" />
+    <ClInclude Include="wykobi\wykobi_graphics_opengl.hpp" />
+    <ClInclude Include="wykobi\wykobi_graphics_vcl.hpp" />
+    <ClInclude Include="wykobi\wykobi_gui.hpp" />
+    <ClInclude Include="wykobi\wykobi_instantiate.hpp" />
+    <ClInclude Include="wykobi\wykobi_math.hpp" />
+    <ClInclude Include="wykobi\wykobi_matrix.hpp" />
+    <ClInclude Include="wykobi\wykobi_nd.hpp" />
+    <ClInclude Include="wykobi\wykobi_utilities.hpp" />
+    <ClInclude Include="Common.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wykobi\wykobi.inl" />
+    <None Include="wykobi\wykobi_axis_projection_descriptor.inl" />
+    <None Include="wykobi\wykobi_clipping.inl" />
+    <None Include="wykobi\wykobi_duplicates.inl" />
+    <None Include="wykobi\wykobi_earclipping.inl" />
+    <None Include="wykobi\wykobi_hull.inl" />
+    <None Include="wykobi\wykobi_matrix.inl" />
+    <None Include="wykobi\wykobi_minimum_bounding_ball.inl" />
+    <None Include="wykobi\wykobi_naive_group_intersections.inl" />
+    <None Include="wykobi\wykobi_nd.inl" />
+    <None Include="wykobi\wykobi_normalization.inl" />
+    <None Include="wykobi\wykobi_ordered_polygon.inl" />
+  </ItemGroup>
+</Project>
