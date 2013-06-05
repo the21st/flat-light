@@ -1,7 +1,9 @@
 #include "Wall.h"
 
-Wall::Wall( Segment segment )
-	:m_segment(segment)
+Wall::Wall( Segment segment, Color color )
+	:
+	m_segment(segment),
+	m_color(color)
 {
 	auto dx = segment[1].x - segment[0].x;
 	auto dy = segment[1].y - segment[0].y;

@@ -1,20 +1,15 @@
-#include <iostream>
 #include "SDL.h"
-#include <assert.h>
 #include "SVG/SVGParser.h"
 #include "Common.h"
 #include "Wall.h"
 
 int main(int argc, char** argv)
 {
-	//SVGParser parser;
+	SVGParser parser;
+	auto scene = parser.Parse("..\\Data\\test.svg");
 
-	//parser.Parse("..\\Data\\test.svg");
-
-	Wall w(wykobi::make_segment(1.0f, 1.0f, 2.0f, 2.0f));
 	
 	
-
 	SDL_Init(SDL_INIT_EVERYTHING);
 	SDL_Quit();
 

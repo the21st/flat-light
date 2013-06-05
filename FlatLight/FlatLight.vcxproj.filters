@@ -6,6 +6,7 @@
     <ClCompile Include="SVG\SVGParser.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Wall.cpp" />
+    <ClCompile Include="Common.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SVG\nanosvg\nanosvg.h" />

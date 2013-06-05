@@ -9,5 +9,5 @@ class SVGParser
 public:
 	SVGParser();
 
-	std::unique_ptr<Scene> Parse(const std::string &filePath);
+	std::unique_ptr<Scene> Parse(const std::string &filePath) const;
 };
