@@ -68,6 +68,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Render\Intersection.cpp" />
+    <ClCompile Include="Render\DirectLightRenderer.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SVG\nanosvg\nanosvg.c" />
@@ -76,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Render\Intersection.h" />
+    <ClInclude Include="Render\DirectLightRenderer.h" />
+    <ClInclude Include="Render\IRenderer.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SVG\nanosvg\nanosvg.h" />
     <ClInclude Include="SVG\SVGParser.h" />

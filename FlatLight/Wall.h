@@ -16,4 +16,10 @@ struct Wall
 
 	// "color" of the wall. Later may be replaced by proper BRDF
 	Color m_color;
+
+	// is this wall an emitter?
+	bool m_isEmissive;
+
+	// samples the wall for lighting. The two parameters are output params.
+	void SampleLight(Vector &position, Color &color) const;
 };

@@ -74,6 +74,9 @@ namespace wykobi
    template<typename T, std::size_t D>
    class pointnd;
 
+   template<typename T>
+   class vector2d;
+
    template<typename T = Float>
    class point2d : public geometric_entity
    {
@@ -82,8 +85,9 @@ namespace wykobi
       typedef const type& const_reference;
       typedef       type& reference;
 
-      point2d() : x(T(0.0)), y(T(0.0)){}
-      point2d(const pointnd<T,2>& point) : x(point[0]), y(point[1]){}
+	  point2d() : x(T(0.0)), y(T(0.0)){}
+	  point2d(const pointnd<T,2>& point) : x(point[0]), y(point[1]){}
+	  point2d(const vector2d<T> &vec) : x(vec.x), y(vec.y){}
      ~point2d(){}
 
       inline point2d<T>& operator=(const pointnd<T,2>& point)
@@ -552,6 +556,12 @@ namespace wykobi
          point2d<T>::x = _x;
          point2d<T>::y = _y;
       }
+
+	  vector2d(const point2d<T> &point)
+	  {
+		  point2d<T>::x = point.x;
+		  point2d<T>::y = point.y;
+	  }
 
       inline vector2d<T>& operator=(const vectornd<T,2>& vec)
       {

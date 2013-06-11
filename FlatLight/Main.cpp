@@ -2,13 +2,15 @@
 #include "SVG/SVGParser.h"
 #include "Common.h"
 #include "Wall.h"
+#include "Render/IRenderer.h"
+#include "Render/DirectLightRenderer.h"
 
 int main(int argc, char** argv)
 {
 	SVGParser parser;
 	auto scene = parser.Parse("..\\Data\\test.svg");
 
-	
+	auto renderer = std::unique_ptr<DirectLightRenderer>(new DirectLightRenderer);
 	
 	SDL_Init(SDL_INIT_EVERYTHING);
 	SDL_Quit();

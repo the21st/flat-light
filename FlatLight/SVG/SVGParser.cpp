@@ -15,7 +15,7 @@ std::unique_ptr<Scene> SVGParser::Parse(const std::string &filePath) const
 	// Load
 	auto plist = svgParseFromFile(filePath.c_str());
 
-	// Use...
+	// Use parsed data
 	for (auto path = plist; path != nullptr; path = path->next)
 	{
 		for (int i = 0; i < path->npts - 1; ++i)
@@ -29,6 +29,9 @@ std::unique_ptr<Scene> SVGParser::Parse(const std::string &filePath) const
 				path->pts[i*2 + 2],
 				path->pts[i*2 + 3]),
 				make_color(path->strokeColor));
+
+			// hasFill is used for marking emitters for now
+			newWall.m_isEmissive = path->hasFill;
 			scene->AddWall(newWall);
 		}
 
@@ -40,6 +43,9 @@ std::unique_ptr<Scene> SVGParser::Parse(const std::string &filePath) const
 				path->pts[0],
 				path->pts[1]),
 				make_color(path->strokeColor));
+
+			// hasFill is used for marking emitters for now
+			newWall.m_isEmissive = path->hasFill;
 			scene->AddWall(newWall);
 		}
 	}

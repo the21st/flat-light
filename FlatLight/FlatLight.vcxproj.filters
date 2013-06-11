@@ -7,6 +7,8 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Wall.cpp" />
     <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Render\DirectLightRenderer.cpp" />
+    <ClCompile Include="Render\Intersection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SVG\nanosvg\nanosvg.h" />
@@ -25,6 +27,9 @@
     <ClInclude Include="wykobi\wykobi_nd.hpp" />
     <ClInclude Include="wykobi\wykobi_utilities.hpp" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Render\IRenderer.h" />
+    <ClInclude Include="Render\DirectLightRenderer.h" />
+    <ClInclude Include="Render\Intersection.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wykobi\wykobi.inl" />
